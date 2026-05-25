@@ -111,7 +111,7 @@ def home():
             </div>
 
             <button class="btn">
-                Backend Service Succesfully updated by Jenkins! 
+                Backend Service Succesfully updated by Jenkins Pipeline! 
             </button>
 
         </div>
