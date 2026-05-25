@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   frontend:
-    build: ./frontend
+    image: priyankayadav2111/frontend-app:latest
 
     container_name: frontend-container
 
@@ -18,7 +18,7 @@ services:
 
 
   backend:
-    build: ./backend
+    image: priyankayadav2111/backend-app:latest
 
     container_name: backend-container
 
