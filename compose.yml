@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+
+  frontend:
+    build: ./frontend
+
+    container_name: frontend-container
+
+    ports:
+      - "3001:80"
+
+    depends_on:
+      - backend
+
+    networks:
+      - frontend-network
+
+
+  backend:
+    build: ./backend
+
+    container_name: backend-container
+
+    ports:
+      - "5001:5000"
+
+    volumes:
+      - backend_logs:/app/logs
+
+    networks:
+      - frontend-network
+
+
+volumes:
+  backend_logs:
+
+
+networks:
+  frontend-network:
+    driver: bridge
